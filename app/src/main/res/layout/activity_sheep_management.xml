@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sheep_management"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/tagNumberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tag_number"
+                android:layout_marginBottom="12dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background" />
+
+            <Spinner
+                android:id="@+id/genderSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/ageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/age"
+                android:inputType="number"
+                android:layout_marginBottom="12dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background" />
+
+            <EditText
+                android:id="@+id/weightEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/weight"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="12dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background" />
+
+            <EditText
+                android:id="@+id/breedEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/breed"
+                android:layout_marginBottom="12dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background" />
+
+            <EditText
+                android:id="@+id/purchasePriceEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/purchase_price"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="12dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background" />
+
+            <Button
+                android:id="@+id/addSheepButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_sheep"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sheepRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel" />
+
+</LinearLayout>
